@@ -1,0 +1,3 @@
+samples attacked: 10, ASR: 0.9, speed: 3.1434663965532517
+samples attacked: 20, ASR: 0.95, speed: 4.0161042211448175
+samples attacked: 30, ASR: 0.9666666666666667, speed: 3.778274709251087
