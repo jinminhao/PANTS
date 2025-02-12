@@ -47,7 +47,7 @@ We will provide an instance in CloudLab which has the environment configured. Fo
 > We recommend the testbed to have similar or identical performance as the instance d430 or c220g5 in CloudLab.
 
 ### Step 1:
-Please download the asset [here](https://drive.google.com/file/d/1uD-CXqbdkl8voQkyXQxQ6KytRGpvFGm-/view?usp=sharing) and uncompress the `asset.tar.gz`. After uncompression, you should see an `asset` directory which includes a lot of data and models. 
+Please download the asset [here](https://drive.google.com/file/d/1uD-CXqbdkl8voQkyXQxQ6KytRGpvFGm-/view?usp=sharing) and uncompress the `asset.tar.gz`. After uncompression, you should see an `asset` directory which includes data and models. 
 
 ### Step 2:
 
@@ -88,7 +88,7 @@ $ cd scripts/
 $ bash test-all.sh
 ```
 
-The script automatically generates multiple figures in `figures/`. Here is the breakdown of a mapping between the figures in the paper and the generated figures from the artifact.
+The script runs all the experiments, generates results and plot figures in `figures/` automatically. Here is a mapping between the figures presented in the paper and the generated figures by the artifact.
 
 | Figure in the paper    | Figure name in `figures/` |
 | -------- | ------- |
