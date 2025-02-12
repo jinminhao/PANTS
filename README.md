@@ -1,6 +1,6 @@
 # PANTS
 
-[[Arxiv](https://arxiv.org/abs/2409.04691)]
+[[Paper (Arxiv)](https://arxiv.org/abs/2409.04691)]
 
 ## Abstract
 
