@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.colors as mcolors
 import matplotlib as mpl
 import os
+from barplot_vertical import draw_barplot
 
 import argparse
 
