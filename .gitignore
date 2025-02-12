@@ -169,3 +169,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# PANTS related
+asset/*
+!asset/.gitkeep
+reference/*
+logs

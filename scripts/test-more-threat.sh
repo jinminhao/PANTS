@@ -66,5 +66,9 @@ python3 attack_cnn.py -d pants-robust-cnn -f $LOGDIR/cnn_end_pants_d21_a5_i25_s1
 python3 attack_cnn.py -d vanilla -f $LOGDIR/cnn_end_vanilla_d16_a40_i19_s20 -a test -n 40 --delay 16 --append 40 --inject 19 --split 20
 python3 attack_cnn.py -d pants-robust-cnn -f $LOGDIR/cnn_end_pants_d16_a40_i19_s20  -a test -n 40 --delay 16 --append 40 --inject 19 --split 20
 
+cd $BASEDIR/plot
+python3 plot_more_threat.py -f $BASEDIR/logs/more-threat-models --figure_dir /nfs/PANTS/figures/
+
+
 duration=$SECONDS
-# echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed." > more-threat-time.txt
+echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed." > more-threat-time.txt
