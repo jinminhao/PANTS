@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+eval "$(conda shell.bash hook)"
+
 conda create -y -n py39-app-vpn python=3.9
 
 conda activate py39-app-vpn
