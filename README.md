@@ -47,9 +47,13 @@ We will provide an instance in CloudLab which has the environment configured. Fo
 > We recommend the testbed to have similar or identical performance as the instance d430 or c220g5 in CloudLab.
 
 ### Step 1:
-Please download the asset [here](https://drive.google.com/file/d/1uD-CXqbdkl8voQkyXQxQ6KytRGpvFGm-/view?usp=sharing) and uncompress the `asset.tar.gz`. After uncompression, you should see an `asset` directory which includes data and models. 
+
+Make sure the conda is correctly installed. Please refer to [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) for more details
 
 ### Step 2:
+Please download the asset [here](https://drive.google.com/file/d/1uD-CXqbdkl8voQkyXQxQ6KytRGpvFGm-/view?usp=sharing) and uncompress the `asset.tar.gz`. After uncompression, you should see an `asset` directory which includes data and models. 
+
+### Step 3:
 
 ```
 $ cd PANTS/
