@@ -367,6 +367,8 @@ for idx in range(len(correct_X)):
                     index=False,
                     )
     total += 1
+    
+    print(f"Progress: {total} / {num_evaluated_samples}")
     if total % 10 == 0:
         now = time.time()
         time_elapsed = now - time_start

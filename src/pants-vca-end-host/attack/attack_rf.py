@@ -531,6 +531,7 @@ for i, testdata in enumerate(loader):
                     )
         adv_attempts += 1
 
+        print(f"Progress: {adv_attempts} / {num_evaluated_samples}")
         if adv_attempts % 10 == 0:
             now = time.time()
             time_elapsed = now - time_start

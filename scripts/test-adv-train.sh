@@ -37,7 +37,8 @@ python3 attack_cnn.py -d amoeba-robust-cnn -f $LOGDIR/amoeba_robust_cnn -a test 
 python3 attack_cnn.py -d pants-robust-cnn -f $LOGDIR/pants_robust_cnn -a test -n 40
 
 cd $BASEDIR/plot
-python3 plot_adv_train.py -f $BASEDIR/logs/adv_train --figure_dir /nfs/PANTS/figures/
+mkdir -p $BASEDIR/figures/
+python3 plot_adv_train.py -f $BASEDIR/logs/adv_train --figure_dir $BASEDIR/figures/
 
 duration=$SECONDS
 # echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed." > adv-train-time.txt

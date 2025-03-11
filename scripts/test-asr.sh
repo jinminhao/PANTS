@@ -21,8 +21,9 @@ conda activate py39-app-vpn
 
 LOGDIR=$BASEDIR/logs
 cd $BASEDIR/plot
-python3 plot_asr.py -f $LOGDIR --figure_dir /nfs/PANTS/figures/
-python3 plot_robustified_asr.py -f $LOGDIR --figure_dir /nfs/PANTS/figures/
+mkdir -p $BASEDIR/figures/
+python3 plot_asr.py -f $LOGDIR --figure_dir $BASEDIR/figures/
+python3 plot_robustified_asr.py -f $LOGDIR --figure_dir $BASEDIR/figures/
 
 duration=$SECONDS
 # echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed." > asr-time.txt

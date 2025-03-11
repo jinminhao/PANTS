@@ -44,14 +44,14 @@ comprehensive roadmap for effectively utilizing PANTS.
 
 We will provide an instance in CloudLab which has the environment configured. For any evaluation which is not using the provided CloudLab instance, please follow the procedures to setup the environment.
 
-> We recommend the testbed to have similar or identical performance as the instance d430 or c220g5 in CloudLab.
+> As PANTS is heavily relying on an SMT solver, please use instance with strong CPU for evaluation. We recommend the testbed to have similar or identical performance as the instance d430 or c220g5 in CloudLab. 
 
 ### Step 1:
 
 Make sure the conda is correctly installed. Please refer to [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) for more details
 
 ### Step 2:
-Please download the asset [here](https://drive.google.com/file/d/1uD-CXqbdkl8voQkyXQxQ6KytRGpvFGm-/view?usp=sharing) and uncompress the `asset.tar.gz`. After uncompression, you should see an `asset` directory which includes data and models. 
+Please download the asset [here](https://drive.google.com/file/d/1uD-CXqbdkl8voQkyXQxQ6KytRGpvFGm-/view?usp=sharing) and uncompress the `asset.tar.gz`. After uncompression, you should see an `asset` directory which includes data and models. Move the directory into the root direcotory of `PANTS`, i.e., `PANTS/asset` 
 
 ### Step 3:
 
@@ -71,12 +71,12 @@ After setup, you can briefly test if the environment is correctly configured by 
 
 ```
 $ cd scripts/
-$ bash test_env.sh
+$ bash test-env.sh
 ```
 
 If the environment is installed successfully, you should see the output as follows
 ```
-$ bash test_env.sh
+$ bash test-env.sh
 
 ...
 Summary: ASR: 1.0, speed: 2.0500868564283423
@@ -88,6 +88,8 @@ Summary: ASR: 1.0, speed: 0.5714318749236006
 
 In order to have smooth artifact evaluation, we provide a script which automatically runs all the provided testing scripts to get the results
 and generate the corresponding figures.
+
+> We highly recommend to use tmux or nohop when running the artifacts. It will take more than one day to finish all the evaluating scripts. 
 
 ```
 $ cd scripts/
@@ -101,7 +103,6 @@ The script runs all the experiments, generates results and plot figures in `figu
 | Fig. 5  | important_features_end-host.pdf,  important_features_in-host.pdf   |
 | Fig. 6  | app_end_host_vanilla.pdf, app_in_path_vanilla.pdf, vpn_end_host_vanilla.pdf, vpn_in_path_vanilla.pdf, vca_end_host_vanilla.pdf, vca_in_path_vanilla.pdf    |
 | Fig. 7  | adv_train.pdf    |
-| Fig. 8  | robustfication_end-host.pdf    |
 | Fig. 8  | robustfication_end-host.pdf    |
 | Fig. 9  | netshare_mlp.pdf, netshare_rf.pdf, netshare_tf.pdf, netshare_cnn.pdf    |
 | Fig. 10  | app_end_host_robustified.pdf, app_in_path_robustified.pdf, vpn_end_host_robustified.pdf, vpn_in_path_robustified.pdf, vca_end_host_robustified.pdf, vca_in_path_robustified.pdf   |

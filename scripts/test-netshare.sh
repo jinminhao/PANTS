@@ -35,7 +35,8 @@ python3 attack_tf.py -d netshare-robust-r4-tf-x147 -f $LOGDIR/tf_end_netshare_r4
 python3 attack_tf.py -d netshare-robust-r5-tf-x168 -f $LOGDIR/tf_end_netshare_r5 -a test -n 40
 
 cd $BASEDIR/plot
-python3 plot_netshare.py -f $LOGDIR --figure_dir /nfs/PANTS/figures/
+mkdir -p $BASEDIR/figures/
+python3 plot_netshare.py -f $LOGDIR --figure_dir $BASEDIR/figures/
 
 duration=$SECONDS
 # echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed." > netshare-time.txt

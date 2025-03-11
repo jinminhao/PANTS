@@ -31,7 +31,8 @@ python3 test_data_tf_to_rf.py -f $BASEDIR/logs/trabsferability
 python3 test_data_tf_to_cnn.py -f $BASEDIR/logs/trabsferability
 
 cd $BASEDIR/plot
-python3 plot_transferability.py -f $BASEDIR/logs/trabsferability --figure_dir /nfs/PANTS/figures/
+mkdir -p $BASEDIR/figures/
+python3 plot_transferability.py -f $BASEDIR/logs/trabsferability --figure_dir $BASEDIR/figures/
 
 duration=$SECONDS
 # echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed." > transferability-time.txt

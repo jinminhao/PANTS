@@ -40,7 +40,8 @@ python3 attack_tf.py -d pants-robust-tf-r4 -f $LOGDIR/tf_end_pants_r4 -a test -n
 python3 attack_tf.py -d pants-robust-tf -f $LOGDIR/tf_end_pants_r5 -a test -n 40
 
 cd $BASEDIR/plot
-python3 plot_robustification.py -f $LOGDIR --figure_dir /nfs/PANTS/figures/
+mkdir -p $BASEDIR/figures/
+python3 plot_robustification.py -f $LOGDIR --figure_dir $BASEDIR/figures/
 
 duration=$SECONDS
 # echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed." > robustification-time.txt
