@@ -137,7 +137,9 @@ model.load_state_dict(
     )
 )
 model.eval()
-device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+# PANTS is heavily relying on CPU as it is iteratively interacting with an SMT solver. 
+# device is forced to be "cpu" as cuda will not speed up the process.
+device = "cpu"
 model.to(device)
 
 

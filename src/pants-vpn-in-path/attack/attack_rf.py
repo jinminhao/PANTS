@@ -579,7 +579,7 @@ for i, testdata in enumerate(loader):
             file.write(l3)
             file.close()
 
-        if args.attack == "test" and adv_attempts == 400:
+        if args.attack == "test" and adv_attempts == num_evaluated_samples:
             break
 
 orig_cross_entropy_results = np.array(orig_cross_entropy_results)

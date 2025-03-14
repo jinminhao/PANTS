@@ -133,7 +133,7 @@ for sample_idx in idx_test:
     iats = feature[0, 0, 400:].reshape(400, 1)
     flow = np.concatenate([pkt_lens, iats], axis=1).reshape(1, 400, 2)
 
-    adv_pred = model(torch.tensor(flow, dtype=torch.float32))
+    adv_pred = model(torch.tensor(flow, dtype=torch.float32).to(device))
     adv_pred = torch.argmax(adv_pred, dim=1).item()
     if adv_pred == gt[0]:
         correct_sample_idx_set.add(int(sample_idx))
@@ -172,7 +172,7 @@ for t in range(1):
         flow[:, :, 1] = (flow[:, :, 1] - min_iats) / (max_iats - min_iats)
         flow[:, :, 0] = (flow[:, :, 0] - min_pkt_lens) / (max_pkt_lens - min_pkt_lens)
 
-        adv_pred = model(torch.tensor(flow, dtype=torch.float32))
+        adv_pred = model(torch.tensor(flow, dtype=torch.float32).to(device))
         adv_pred = torch.argmax(adv_pred, dim=1).item()
         if adv_pred != gt and correct_sample_dict[sample_idx] == 0:
             correct_sample_dict[sample_idx] = 1

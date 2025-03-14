@@ -151,7 +151,7 @@ for sample_idx in idx_test:
     #     norm_return_df[0, :].astype(np.float32)
     # )
     # feature = reconstructed_adv_inputs.reshape(1, -1)
-    adv_pred = model(torch.tensor(feature, dtype=torch.float32))
+    adv_pred = model(torch.tensor(feature, dtype=torch.float32).to(device))
     adv_pred = torch.argmax(adv_pred, dim=1).item()
     if adv_pred == gt[0]:
         correct_sample_idx_set.add(int(sample_idx))
