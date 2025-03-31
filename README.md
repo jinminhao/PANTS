@@ -1,4 +1,4 @@
-# PANTS
+# Robustifying ML-powered Network Classifiers with PANTS
 
 [[Paper (Arxiv)](https://arxiv.org/abs/2409.04691)]
 
