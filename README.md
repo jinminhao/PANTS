@@ -1,6 +1,10 @@
 # Robustifying ML-powered Network Classifiers with PANTS
 
-[[Paper (Arxiv)](https://arxiv.org/abs/2409.04691)]
+Author: [Minhao Jin](https://jinminhao.github.io/), [Maria Apostolaki](https://netsyn.princeton.edu/people/maria-apostolaki)
+
+[[Paper (arxiv)](https://arxiv.org/abs/2409.04691)], [[Paper (Usenix Sec '25)](https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-9-jin-minhao.pdf)], [[Blog](https://blog.ai.princeton.edu/2025/03/28/robustifying-ml-powered-network-classifiers-with-pants/)]
+
+![End-To-End](figures-reference/e2e.png)
 
 ## Abstract
 
