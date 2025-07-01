@@ -6,7 +6,7 @@ import joblib
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
-from transformers import BertConfig, BertModel, AdamW
+from transformers import BertConfig, BertModel
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from art.estimators.classification import SklearnClassifier
@@ -90,7 +90,7 @@ class TimeSeriesTransformer(nn.Module):
 
 # Load the model
 model = TimeSeriesTransformer(input_dim=2, hidden_dim=128, num_classes=14)
-model.load_state_dict(torch.load(os.path.join(asset_model_dir, 'transformer.pth'), map_location=torch.device('cpu')))
+model.load_state_dict(torch.load(os.path.join(asset_model_dir, 'transformer.pth'), map_location=torch.device('cpu')), strict=False)
 model.eval()
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 model.to(device)

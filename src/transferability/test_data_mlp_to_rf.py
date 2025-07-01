@@ -6,7 +6,7 @@ import joblib
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
-from transformers import BertConfig, BertModel, AdamW
+from transformers import BertConfig, BertModel
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from art.estimators.classification import SklearnClassifier

@@ -6,7 +6,7 @@ import joblib
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
-from transformers import BertConfig, BertModel, AdamW
+from transformers import BertConfig, BertModel
 from utils_tf import *
 import pandas as pd
 import argparse
@@ -138,7 +138,8 @@ model = TimeSeriesTransformer(input_dim=2, hidden_dim=128, num_classes=14)
 model.load_state_dict(
     torch.load(
         os.path.join(asset_model_dir, "transformer.pth"), map_location=torch.device("cpu")
-    )
+    ),
+    strict=False
 )
 model.eval()
 # PANTS is heavily relying on CPU as it is iteratively interacting with an SMT solver. 
