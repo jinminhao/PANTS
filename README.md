@@ -113,3 +113,16 @@ The script runs all the experiments, generates results and plot figures in `figu
 | Fig. 11  | threat.pdf   |
 | Fig. 12 | NA. Please refer to `logs/{app,vpn,vca}/..._vanilla/results.txt` for generation speed.
 | Fig. 13  | transferability.pdf   |
+
+## Citation
+
+If you find our code / paper useful, please cite our work.
+
+```
+@inproceedings{jin2024pants,
+  title={Robustifying ML-powered Network Classifiers with PANTS},
+  author={Minhao Jin and Maria Apostolaki},
+  booktitle={34th USENIX Security Symposium (USENIX Security 25)},
+  year={2025}
+}
+```
